@@ -58,9 +58,10 @@ php bin/magento deploy:mode:set developer
 
 <h2>Step 3: Install and verify the installation</h2>
 
-<strong>-Install by Composer :</strong> You can install the module by Composer (If your server supports Composer). Please go to the Magento folder and run the command:
-
-<strong>composer require magestore/module-bannerslider</strong>
+	composer config repositories.bannerslider vcs https://github.com/4dhk/Bannerslider-Magento2.git
+	composer require magestore/module-bannerslider:dev-master
+    php bin/magento module:enable Magestore_Bannerslider
+    php bin/magento setup:upgrade
 
 <strong>-Install by uploading files:</strong>
 
