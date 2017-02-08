@@ -314,7 +314,8 @@ class SliderItem extends \Magento\Framework\View\Element\Template
      */
     public function getBannerImageUrl(\Magestore\Bannerslider\Model\Banner $banner)
     {
-        return $this->_bannersliderHelper->getBaseUrlMedia($banner->getImage());
+        $isSecure = $this->_storeManager->getStore()->isCurrentlySecure();
+        return $this->_bannersliderHelper->getBaseUrlMedia($banner->getImage(), $isSecure);
     }
 
     /**
