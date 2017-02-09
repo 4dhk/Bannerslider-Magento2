@@ -59,7 +59,7 @@ php bin/magento deploy:mode:set developer
 <h2>Step 3: Install and verify the installation</h2>
 
 	composer config repositories.bannerslider vcs https://github.com/4dhk/Bannerslider-Magento2.git
-	composer require magestore/module-bannerslider:dev-master
+	composer require magestore/bannerslider-magento2:dev-bugdix
     php bin/magento module:enable Magestore_Bannerslider
     php bin/magento setup:upgrade
 
